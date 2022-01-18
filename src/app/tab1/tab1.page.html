@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> My super tabs app </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>Change Select Labels</ion-label>
+      <ion-button (click)="changeLabels()">Change Labels</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ionic Select</ion-label>
+      <ion-select
+        [value]="selectedValue"
+        (ionChange)="selectedValue = $event.detail.value"
+      >
+        <ion-select-option value="1"> {{ label1 }} </ion-select-option>
+        <ion-select-option value="2"> {{ label2 }} </ion-select-option>
+        <ion-select-option value="3"> {{ label3 }} </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
